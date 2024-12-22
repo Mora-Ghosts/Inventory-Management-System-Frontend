@@ -1,1 +1,84 @@
-<p>view-stock works!</p>
+<div class="max-w-6xl mx-auto p-6 bg-gray-100 rounded-lg shadow-lg">
+  <h2 class="text-2xl font-bold mb-4 text-gray-700">Manage Stocks</h2>
+
+  <!-- Stocks Table -->
+  <table class="w-full text-sm text-left text-gray-500 border-collapse border border-gray-300">
+    <thead class="bg-gray-200 text-gray-700">
+    <tr>
+      <th class="border border-gray-300 px-4 py-2">Stock ID</th>
+      <th class="border border-gray-300 px-4 py-2">Product ID</th>
+      <th class="border border-gray-300 px-4 py-2">Size</th>
+      <th class="border border-gray-300 px-4 py-2">Count</th>
+      <th class="border border-gray-300 px-4 py-2">Price</th>
+      <th class="border border-gray-300 px-4 py-2">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let stock of stocks" class="bg-white hover:bg-gray-50">
+      <td class="border border-gray-300 px-4 py-2">{{ stock.stockId }}</td>
+      <td class="border border-gray-300 px-4 py-2">{{ stock.productId }}</td>
+      <td class="border border-gray-300 px-4 py-2">{{ stock.size }}</td>
+      <td class="border border-gray-300 px-4 py-2">{{ stock.count }}</td>
+      <td class="border border-gray-300 px-4 py-2">{{ stock.stockPrice  }}</td>
+      <td class="border border-gray-300 px-4 py-2 flex space-x-2">
+        <button
+          class="px-2 py-1 bg-blue-500 text-white rounded hover:bg-blue-600"
+          (click)="editStock(stock)">Edit</button>
+        <button
+          class="px-2 py-1 bg-red-500 text-white rounded hover:bg-red-600"
+          (click)="deleteStock(stock.stockId)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <!-- Edit Stock Modal -->
+  <div
+    *ngIf="editableStock"
+    class="fixed inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center z-50">
+    <div class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
+      <h3 class="text-xl font-bold mb-4 text-gray-700">Edit Stock</h3>
+      <form (ngSubmit)="updateStock()" class="space-y-4">
+        <div>
+          <label for="size" class="block text-sm font-medium text-gray-700">Size</label>
+          <input
+            type="number"
+            id="size"
+            [(ngModel)]="editableStock.size"
+            name="size"
+            required
+            class="block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+        <div>
+          <label for="count" class="block text-sm font-medium text-gray-700">Count</label>
+          <input
+            type="number"
+            id="count"
+            [(ngModel)]="editableStock.count"
+            name="count"
+            required
+            class="block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+        <div>
+          <label for="price" class="block text-sm font-medium text-gray-700">Price</label>
+          <input
+            type="number"
+            id="price"
+            [(ngModel)]="editableStock.stockPrice"
+            name="stockPrice"
+            required
+            class="block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+        <div class="flex justify-end space-x-2">
+          <button
+            type="button"
+            (click)="cancelEdit()"
+            class="px-4 py-2 bg-gray-300 rounded hover:bg-gray-400">Cancel</button>
+          <button
+            type="submit"
+            class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

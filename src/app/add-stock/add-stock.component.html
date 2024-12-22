@@ -1,1 +1,63 @@
-<p>add-stock works!</p>
+<div class="max-w-4xl mx-auto p-6 bg-gray-100 rounded-lg shadow-lg">
+  <h2 class="text-2xl font-bold mb-4 text-gray-700">Add Stock</h2>
+
+  <form (ngSubmit)="onSubmit(stockForm)" #stockForm='ngForm' class="space-y-4">
+    <!-- Product ID Dropdown -->
+    <div>
+      <label for="productId" class="block text-sm font-medium text-gray-700">Product</label>
+      <select
+        id="productId"
+        [(ngModel)]="newStock.productId"
+        name="productId"
+        required
+        class="block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        <option *ngFor="let product of products" [value]="product.pid">
+          {{ product.brand }} - {{ product.model }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Size -->
+    <div>
+      <label for="size" class="block text-sm font-medium text-gray-700">Size</label>
+      <input
+        type="number"
+        id="size"
+        [(ngModel)]="newStock.size"
+        name="size"
+        required
+        class="block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+    </div>
+
+    <!-- Count -->
+    <div>
+      <label for="count" class="block text-sm font-medium text-gray-700">Count</label>
+      <input
+        type="number"
+        id="count"
+        [(ngModel)]="newStock.count"
+        name="count"
+        required
+        class="block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+    </div>
+
+    <!-- Stock Price -->
+    <div>
+      <label for="stockPrice" class="block text-sm font-medium text-gray-700">Stock Price</label>
+      <input
+        type="number"
+        id="stockPrice"
+        [(ngModel)]="newStock.stockPrice"
+        name="stockPrice"
+        required
+        class="block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+    </div>
+
+    <!-- Submit Button -->
+    <div class="text-right">
+      <button
+        type="submit"
+        class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700">Add Stock</button>
+    </div>
+  </form>
+</div>
