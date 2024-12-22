@@ -7,10 +7,10 @@ import { FormsModule } from '@angular/forms'; // Import FormsModule
 
 @Component({
   selector: 'app-view-categories',
-  templateUrl: './view-type.component.html',
+  templateUrl: './view-category-type.component.html',
   imports:[NgIf, NgFor, FormsModule]
 })
-export class ViewTypeComponent implements OnInit {
+export class ViewCategoryTypeComponent implements OnInit {
   categories: CategoryDTO[] = [];
   editMode: number | null = null;
 

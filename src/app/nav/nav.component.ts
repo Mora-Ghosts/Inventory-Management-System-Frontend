@@ -15,10 +15,11 @@ export class NavComponent {
     { label: 'Add Product Types', path: 'add-product-types' },
     { label: 'Add Stocks', path: 'add-stocks' },
     { label: 'Add Transactions', path: 'add-transactions' },
-    { label: 'View Types', path: 'view-types' },
+    { label: 'View Category Types', path: 'view-category-types' },
+    { label: 'View Product Types', path: 'view-product-types' },
     { label: 'View Stocks', path: 'view-stocks' },
     { label: 'View Transactions', path: 'view-transactions' },
   ];
-  
+
 
 }

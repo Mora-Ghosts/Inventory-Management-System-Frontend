@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ViewTypeComponent } from './view-type.component';
+import { ViewProductTypeComponent } from './view-product-type.component';
 
-describe('ViewTypeComponent', () => {
-  let component: ViewTypeComponent;
-  let fixture: ComponentFixture<ViewTypeComponent>;
+describe('ViewProductTypeComponent', () => {
+  let component: ViewProductTypeComponent;
+  let fixture: ComponentFixture<ViewProductTypeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ViewTypeComponent]
+      imports: [ViewProductTypeComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ViewTypeComponent);
+    fixture = TestBed.createComponent(ViewProductTypeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
