@@ -1,1 +1,70 @@
-<p>add-product-type works!</p>
+<div class="max-w-4xl mx-auto p-6 bg-gray-100 rounded-lg shadow-lg">
+  <h2 class="text-2xl font-bold mb-4 text-gray-700">Add Product Type</h2>
+
+  <!-- Form Start -->
+  <form (ngSubmit)="onSubmit(productForm)" #productForm="ngForm" class="space-y-6">
+    <!-- Category Dropdown -->
+    <div>
+      <label for="category" class="block text-sm font-medium text-gray-700">Category</label>
+      <select
+        id="category"
+        name="category"
+        [(ngModel)]="productType.categoryId"
+        required
+        class="block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        <option value="" disabled>Select a category</option>
+        <option *ngFor="let category of categories" [value]="category.cid">
+          {{ category.categoryName }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Brand -->
+    <div>
+      <label for="brand" class="block text-sm font-medium text-gray-700">Brand</label>
+      <input
+        type="text"
+        id="brand"
+        name="brand"
+        [(ngModel)]="productType.brand"
+        required
+        class="block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+        placeholder="Enter brand">
+    </div>
+
+    <!-- Model -->
+    <div>
+      <label for="model" class="block text-sm font-medium text-gray-700">Model</label>
+      <input
+        type="text"
+        id="model"
+        name="model"
+        [(ngModel)]="productType.model"
+        required
+        class="block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+        placeholder="Enter model">
+    </div>
+
+    <!-- Color -->
+    <div>
+      <label for="color" class="block text-sm font-medium text-gray-700">Color</label>
+      <input
+        type="text"
+        id="color"
+        name="color"
+        [(ngModel)]="productType.color"
+        required
+        class="block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+        placeholder="Enter color">
+    </div>
+
+    <!-- Submit Button -->
+    <div>
+      <button
+        type="submit"
+        class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        Add Product Type
+      </button>
+    </div>
+  </form>
+</div>
