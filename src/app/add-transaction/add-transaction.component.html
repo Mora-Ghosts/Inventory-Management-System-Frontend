@@ -1,1 +1,72 @@
-<p>add-transaction works!</p>
+<div class="max-w-4xl mx-auto p-6 bg-gray-100 rounded-lg shadow-lg">
+  <h2 class="text-2xl font-bold mb-4 text-gray-700">Add Transaction</h2>
+
+  <form (ngSubmit)="addTransaction()" class="space-y-4">
+    <!-- Transaction Type Dropdown -->
+    <div>
+      <label for="transactionTypeId" class="block text-sm font-medium text-gray-700">
+        Transaction Type
+      </label>
+      <select
+        id="transactionTypeId"
+        [(ngModel)]="transaction.transactionTypeId"
+        name="transactionTypeId"
+        required
+        class="block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+      >
+        <option *ngFor="let type of transactionTypes" [value]="type.ttid">
+          {{ type.transactionType }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Stock ID Dropdown -->
+    <div>
+      <label for="stockId" class="block text-sm font-medium text-gray-700">Stock</label>
+      <select
+        id="stockId"
+        [(ngModel)]="transaction.stockId"
+        name="stockId"
+        required
+        class="block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+      >
+        <option *ngFor="let stock of stocks" [value]="stock.stockId">
+          {{ stock.stockId }}
+        </option>
+      </select>
+    </div>
+
+    <!-- Quantity -->
+    <div>
+      <label for="quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
+      <input
+        type="number"
+        id="quantity"
+        [(ngModel)]="transaction.quantity"
+        name="quantity"
+        required
+        class="block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+      />
+    </div>
+
+    <!-- Price -->
+    <div>
+      <label for="price" class="block text-sm font-medium text-gray-700">Price</label>
+      <input
+        type="text"
+        id="price"
+        [(ngModel)]="transaction.price"
+        name="price"
+        required
+        class="block w-full mt-1 rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+      />
+    </div>
+
+    <button
+      type="submit"
+      class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700"
+    >
+      Add Transaction
+    </button>
+  </form>
+</div>
