@@ -1,0 +1,27 @@
+<div class="max-w-md mx-auto mt-8 p-4 border border-gray-300 shadow-lg rounded-lg">
+    <h2 class="text-lg font-bold mb-4">Add Category</h2>
+    <form (ngSubmit)="onSubmit()" #categoryForm="ngForm">
+      <div class="mb-4">
+        <label for="categoryName" class="block text-sm font-medium text-gray-700">Category Name</label>
+        <input
+          type="text"
+          id="categoryName"
+          name="categoryName"
+          [(ngModel)]="category.categoryName"
+          required
+          class="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+        />
+      </div>
+      <button
+        type="submit"
+        [disabled]="categoryForm.invalid"
+        class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600"
+      >
+        Add Category
+      </button>
+    </form>
+    <div *ngIf="message" class="mt-4 p-2 bg-green-100 text-green-700 rounded-md">
+      {{ message }}
+    </div>
+  </div>
+  

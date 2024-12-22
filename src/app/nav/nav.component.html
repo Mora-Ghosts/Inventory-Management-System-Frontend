@@ -1,0 +1,19 @@
+<nav class="bg-gray-800 text-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center">
+          <span class="text-2xl font-bold">ShoeInvent</span>
+        </div>
+        <div class="flex space-x-4">
+          <a
+            *ngFor="let link of navigationLinks"
+            [routerLink]="link.path"
+            routerLinkActive="bg-gray-900"
+            class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700"
+          >
+            {{ link.label }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
