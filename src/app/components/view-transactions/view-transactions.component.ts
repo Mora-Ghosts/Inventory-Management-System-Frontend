@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { Transaction } from '../transaction';
-import { TransactionType } from '../transaction-type';
-import { Stock } from '../stock';
-import { TransactionService } from '../transaction.service';
-import { TransactionTypeService } from '../transaction-type.service';
-import { StockService } from '../stock-service.service';
+import { Transaction } from '../../interfaces/transaction';
+import { TransactionType } from '../../interfaces/transaction-type';
+import { Stock } from '../../interfaces/stock';
+import { TransactionService } from '../../services/transaction.service';
+import { TransactionTypeService } from '../../services/transaction-type.service';
+import { StockService } from '../../services/stock-service.service';
 import {FormsModule} from '@angular/forms';
 import {NgForOf, NgIf} from '@angular/common';
 

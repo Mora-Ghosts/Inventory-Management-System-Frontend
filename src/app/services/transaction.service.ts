@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {Stock} from './stock';
+import {Stock} from '../interfaces/stock';
 import {Observable} from 'rxjs';
-import {Transaction} from './transaction';
+import {Transaction} from '../interfaces/transaction';
 
 @Injectable({
   providedIn: 'root'

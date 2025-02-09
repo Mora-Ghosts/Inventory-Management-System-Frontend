@@ -1,18 +1,18 @@
 
 
-import { StockService } from '../stock-service.service';
-import { Stock } from '../stock';
+import { StockService } from '../../services/stock-service.service';
+import { Stock } from '../../interfaces/stock';
 import {FormsModule, NgForm} from '@angular/forms';
 import {NgFor, NgIf} from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ProductTypeService} from '../product-type-service.service';
-import { ProductType } from '../product-type';
+import { ProductTypeService} from '../../services/product-type-service.service';
+import { ProductType } from '../../interfaces/product-type';
 
 @Component({
   selector: 'app-stock',
   templateUrl: './add-stock.component.html',
   styleUrls: ['./add-stock.component.css'],
-  imports:[FormsModule, NgIf, NgFor]
+  imports:[FormsModule, NgFor]
 })
 export class AddStockComponent {
   newStock: Stock = {

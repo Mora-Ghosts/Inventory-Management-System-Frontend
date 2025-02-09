@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {ProductType} from '../product-type';
-import {ProductTypeService} from '../product-type-service.service';
+import {ProductType} from '../../interfaces/product-type';
+import {ProductTypeService} from '../../services/product-type-service.service';
 import {FormsModule} from '@angular/forms';
 import {NgFor, NgIf} from '@angular/common';
 

@@ -1,7 +1,7 @@
 
 import { Component } from '@angular/core';
-import { CategoryDTO } from '../category-dto';
-import { CategoryService } from '../category-service.service';
+import { CategoryDTO } from '../../interfaces/category-dto';
+import { CategoryService } from '../../services/category-service.service';
 import { FormsModule } from '@angular/forms'; // Import FormsModule
 import { NgIf } from '@angular/common';
 

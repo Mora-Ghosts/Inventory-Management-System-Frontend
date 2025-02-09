@@ -1,14 +1,14 @@
 import { Routes } from '@angular/router';
-import { HeroComponent } from './hero/hero.component';
-import { AddCatagoryComponent } from './add-catagory/add-catagory.component';
-import { AddTransactionTypeComponent } from './add-transaction-type/add-transaction-type.component';
-import { AddProductTypeComponent } from './add-product-type/add-product-type.component';
-import { AddStockComponent } from './add-stock/add-stock.component';
-import { AddTransactionComponent } from './add-transaction/add-transaction.component';
-import { ViewCategoryTypeComponent } from './view-category-type/view-category-type.component';
-import { ViewStockComponent } from './view-stock/view-stock.component';
-import { ViewTransactionsComponent } from './view-transactions/view-transactions.component';
-import {ViewProductTypeComponent} from './view-product-type/view-product-type.component';
+import { HeroComponent } from './components/hero/hero.component';
+import { AddCatagoryComponent } from './components/add-catagory/add-catagory.component';
+import { AddTransactionTypeComponent } from './components/add-transaction-type/add-transaction-type.component';
+import { AddProductTypeComponent } from './components/add-product-type/add-product-type.component';
+import { AddStockComponent } from './components/add-stock/add-stock.component';
+import { AddTransactionComponent } from './components/add-transaction/add-transaction.component';
+import { ViewCategoryTypeComponent } from './components/view-category-type/view-category-type.component';
+import { ViewStockComponent } from './components/view-stock/view-stock.component';
+import { ViewTransactionsComponent } from './components/view-transactions/view-transactions.component';
+import {ViewProductTypeComponent} from './components/view-product-type/view-product-type.component';
 
 export const routes: Routes = [
     {//Analytics : Dashboards

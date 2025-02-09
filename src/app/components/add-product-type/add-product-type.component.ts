@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import {FormsModule, NgForm} from '@angular/forms';
-import { ProductTypeService } from '../product-type-service.service';
-import { CategoryService } from '../category-service.service';
-import {ProductType} from '../product-type';
+import { ProductTypeService } from '../../services/product-type-service.service';
+import { CategoryService } from '../../services/category-service.service';
+import {ProductType} from '../../interfaces/product-type';
 import {NgFor, NgIf} from '@angular/common';
-import {CategoryDTO} from '../category-dto';
+import {CategoryDTO} from '../../interfaces/category-dto';
 
 @Component({
   selector: 'app-add-product-type',
   templateUrl: './add-product-type.component.html',
   styleUrls: ['./add-product-type.component.css'],
-  imports:[FormsModule, NgIf, NgFor]
+  imports:[FormsModule, NgFor]
 })
 export class AddProductTypeComponent implements OnInit {
   categories: CategoryDTO[] = []; // Store fetched categories

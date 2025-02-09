@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {Stock} from '../stock';
-import {StockService} from '../stock-service.service';
+import {Stock} from '../../interfaces/stock';
+import {StockService} from '../../services/stock-service.service';
 import {NgForOf, NgIf} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 

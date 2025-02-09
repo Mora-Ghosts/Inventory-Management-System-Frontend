@@ -1,10 +1,10 @@
 
 import { Component, OnInit } from '@angular/core';
-import { TransactionType } from '../transaction-type';
-import { Transaction } from '../transaction';
-import { TransactionTypeService } from '../transaction-type.service';
-import { StockService } from '../stock-service.service';
-import { TransactionService } from '../transaction.service';
+import { TransactionType } from '../../interfaces/transaction-type';
+import { Transaction } from '../../interfaces/transaction';
+import { TransactionTypeService } from '../../services/transaction-type.service';
+import { StockService } from '../../services/stock-service.service';
+import { TransactionService } from '../../services/transaction.service';
 import {FormsModule} from '@angular/forms';
 import {NgFor, NgIf} from '@angular/common';
 
@@ -12,7 +12,7 @@ import {NgFor, NgIf} from '@angular/common';
   selector: 'app-add-transaction',
   templateUrl: './add-transaction.component.html',
   styleUrls: ['./add-transaction.component.css'],
-  imports:[FormsModule, NgIf, NgFor]
+  imports:[FormsModule, NgFor]
 })
 export class AddTransactionComponent implements OnInit {
   transaction: Transaction = {
