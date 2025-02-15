@@ -1,0 +1,32 @@
+.stock-value-container {
+  width: 80%; /* Adjust width as needed */
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.stock-value-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.chart-container-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.chart-container {
+  flex: 1;
+  width: 45%; 
+  padding: 10px;
+}
+
+.chart-container canvas {
+  width: 100% !important;
+  height: auto !important;
+}
